@@ -1,0 +1,25 @@
+name: Amazon Price Tracker
+
+on:
+  schedule:
+    - cron: '*/15 * * * *' # ده التايمر: هيشتغل كل 15 دقيقة أوتوماتيك
+  workflow_dispatch: # ده زرار التشغيل اليدوي عشان تجربه دلوقتي
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Run bot
+        run: python bot.py
