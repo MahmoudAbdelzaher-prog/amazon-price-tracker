@@ -2,8 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 
 # --- البيانات دي أهم من عهده المخزن ---
-TOKEN = "هنا_تحط_التوكن_اللي_من_بوت_فاذر"
-CHAT_ID = "هنا_تحط_الايدي_بتاعك"
+TOKEN = "8651775947:AAHM1F0fLZfCmKLKmEwU5z0oKhWbJp2TUvU"
+CHAT_ID = "1385986683"
 # ------------------------------------
 
 def check_amazon():
